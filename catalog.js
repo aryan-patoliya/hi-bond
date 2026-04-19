@@ -35,6 +35,28 @@
       .replace(/^-|-$/g, "") || "product";
   }
 
+  function productSpecsEntries(p) {
+    const specs = [
+      ["Material", p.material],
+      ["Handle material", p.handleMaterial],
+      ["Usage / application", p.usageApplication],
+      ["Type of power tool", p.typeOfPowerTool],
+      ["Color", p.color],
+    ];
+    if (Array.isArray(p.sizes) && p.sizes.length) {
+      const sizeText = p.sizes
+        .map(function (s) {
+          return String(s);
+        })
+        .filter(function (s) {
+          return s.trim();
+        })
+        .join(" · ");
+      if (sizeText) specs.push(["Sizes", sizeText]);
+    }
+    return specs;
+  }
+
   function productDetailHref(slug) {
     return "product.html?id=" + encodeURIComponent(slug);
   }
@@ -48,15 +70,7 @@
       : "bg-rose-500/10 text-rose-200 border border-rose-400/20";
     const stockLabel = p.inStock ? "In stock" : "Out of stock";
 
-    const specs = [
-      ["Material", p.material],
-      ["Handle material", p.handleMaterial],
-      ["Usage / application", p.usageApplication],
-      ["Type of power tool", p.typeOfPowerTool],
-      ["Color", p.color],
-    ];
-
-    const specRows = specs
+    const specRows = productSpecsEntries(p)
       .map(
         ([label, val]) => `
         <div class="flex justify-between gap-4 py-1.5 border-b border-white/10 last:border-0">
@@ -106,15 +120,7 @@
       : "bg-rose-500/10 text-rose-200 border border-rose-400/20";
     const stockLabel = p.inStock ? "In stock" : "Out of stock";
 
-    const specs = [
-      ["Material", p.material],
-      ["Handle material", p.handleMaterial],
-      ["Usage / application", p.usageApplication],
-      ["Type of power tool", p.typeOfPowerTool],
-      ["Color", p.color],
-    ];
-
-    const specRows = specs
+    const specRows = productSpecsEntries(p)
       .map(
         ([label, val]) => `
         <div class="flex flex-col sm:flex-row sm:justify-between sm:gap-8 py-3 border-b border-white/[0.08] last:border-0">

@@ -4,6 +4,7 @@
  *
  * slug — URL id for product.html?id=… (stable; do not change once published if links are shared).
  * priority — number; higher values appear first (top of the grid). Omit or use 0 for lowest.
+ * sizes — optional string[]; size variations shown on the catalog card and product page (omit if not applicable).
  */
 window.PRODUCTS = [
   {
@@ -21,6 +22,7 @@ window.PRODUCTS = [
     usageApplication: "Construction",
     typeOfPowerTool: "Hand tools",
     color: "Bright Silver",
+    sizes: ["8 in", "9 in", "10 in"],
   },
   {
     slug: "masonry-trowel",
