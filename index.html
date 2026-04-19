@@ -25,6 +25,7 @@
             fontFamily: {
               sans: ["Inter", "system-ui", "sans-serif"],
               display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+              logo: ["Georgia", "Times New Roman", "Times", "serif"],
             },
             boxShadow: {
               "accent-glow": "0 0 0 1px rgba(255, 180, 26, 0.4), 0 12px 40px -12px rgba(255, 180, 26, 0.45)",
@@ -85,22 +86,18 @@
     <header
       class="relative z-30 border-b border-white/[0.06] bg-brand-header/90 backdrop-blur-xl supports-[backdrop-filter]:bg-brand-header/80 sticky top-0"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[3.75rem] md:h-16 flex items-center justify-between gap-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4rem] md:min-h-[4.5rem] flex items-center justify-between gap-4 py-2 md:py-0">
         <a
-          href="#"
-          class="flex items-center gap-3 font-display font-extrabold text-[0.9375rem] sm:text-base md:text-lg text-white tracking-tight hover:opacity-95 transition-opacity"
+          href="index.html"
+          class="font-logo font-normal text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.125rem] text-brand-accent tracking-tight leading-none hover:text-[#ffc030] transition-colors"
         >
-          <span class="text-brand-accent shrink-0" aria-hidden="true">
-            <svg class="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M22.7 19l-9.1-9.1c.9-2.3.4-5-.7-6.4L16 .5 12 4.5 14.5 7c-1.8-.6-3.8-.3-5.4.9-1.9 1.4-2.7 3.8-2.1 6.1L2 22l6.5-6.5c2.4.7 5.1-.1 6.7-2.1 1.2-1.6 1.5-3.6.9-5.4l2.5-2.5 2.9 2.9-5.6 5.6L22.7 19z"
-              />
-            </svg>
+          <span class="relative inline-block whitespace-nowrap">
+            HI-BOND
+            <span class="absolute left-full top-0 ml-0.5 text-[0.42em] font-normal leading-none">®</span>
           </span>
-          Hi Bond Tools Industries
         </a>
         <nav class="flex items-center gap-1 sm:gap-2 text-[0.8125rem] sm:text-sm font-medium text-slate-400 shrink-0">
-          <a href="#products" class="nav-link px-2 sm:px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+          <a href="products.html" class="nav-link px-2 sm:px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
             >Products</a
           >
           <a
@@ -146,7 +143,7 @@
                 <span aria-hidden="true" class="text-base leading-none font-bold">→</span>
               </a>
               <a
-                href="#products"
+                href="products.html"
                 class="inline-flex items-center justify-center rounded-xl border border-slate-500/90 bg-white/[0.04] text-white px-6 sm:px-8 py-3.5 text-sm font-semibold hover:bg-white/[0.08] hover:border-slate-400 transition-colors"
               >
                 View Products
@@ -289,22 +286,23 @@
 
       <section id="products" class="relative z-10 scroll-mt-20 border-t border-white/[0.06] bg-gradient-to-b from-black/30 to-brand-navy">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 md:mb-14">
-            <div>
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-8">
+            <div class="max-w-xl">
               <p class="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-3">Catalog</p>
               <h2 class="font-display text-2xl md:text-4xl font-extrabold text-white tracking-tight">Products</h2>
-              <p class="text-slate-400 mt-3 text-sm md:text-base max-w-xl">
-                <span id="product-count">0</span> items — edit
-                <code class="text-slate-500 bg-white/5 px-1.5 py-0.5 rounded text-xs">products.js</code>
-                to update stock, specs, and display order (by priority).
+              <p class="text-slate-400 mt-3 text-sm md:text-base">
+                Plastering trowels, masonry trowels, and related hand tools. Open the products page for
+                the full list, specifications, and stock — managed in
+                <code class="text-slate-500 bg-white/5 px-1.5 py-0.5 rounded text-xs">products.js</code>.
               </p>
             </div>
+            <a
+              href="products.html"
+              class="inline-flex items-center justify-center shrink-0 rounded-xl bg-brand-accent text-brand-navy px-8 py-3.5 text-sm font-bold shadow-accent-glow hover:bg-[#ffc030] transition-all w-full sm:w-auto"
+            >
+              Browse all products
+            </a>
           </div>
-          <div
-            id="product-list"
-            class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8"
-            aria-live="polite"
-          ></div>
         </div>
       </section>
 
@@ -347,7 +345,5 @@
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
-    <script src="products.js"></script>
-    <script src="main.js"></script>
   </body>
 </html>

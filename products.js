@@ -2,10 +2,12 @@
  * Hi Bond Tools Industries — product catalog
  * Add or update entries in the PRODUCTS array below.
  *
+ * slug — URL id for product.html?id=… (stable; do not change once published if links are shared).
  * priority — number; higher values appear first (top of the grid). Omit or use 0 for lowest.
  */
 window.PRODUCTS = [
   {
+    slug: "plastering-trowel",
     priority: 30,
     title: "Plastering Trowel",
     description:
@@ -21,6 +23,7 @@ window.PRODUCTS = [
     color: "Bright Silver",
   },
   {
+    slug: "masonry-trowel",
     priority: 20,
     title: "Masonry Trowel",
     description:
@@ -36,6 +39,7 @@ window.PRODUCTS = [
     color: "Bright Silver",
   },
   {
+    slug: "margin-trowel-square",
     priority: 10,
     title: "Margin Trowel (square)",
     description:
@@ -49,5 +53,5 @@ window.PRODUCTS = [
     usageApplication: "Construction",
     typeOfPowerTool: "W/O. Power",
     color: "Bright Silver",
-  },
+  }
 ];

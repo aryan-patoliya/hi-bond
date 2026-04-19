@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product — Hi Bond Tools Industries</title>
+    <meta name="description" content="Product details — Hi Bond Tools Industries, Gujarat." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                navy: "#051C33",
+                "navy-deep": "#0A1F33",
+                header: "#141414",
+                accent: "#FFB41A",
+                muted: "#94A3B8",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+              logo: ["Georgia", "Times New Roman", "Times", "serif"],
+            },
+            boxShadow: {
+              "accent-glow": "0 0 0 1px rgba(255, 180, 26, 0.4), 0 12px 40px -12px rgba(255, 180, 26, 0.45)",
+              card: "0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 20px 40px -20px rgba(0, 0, 0, 0.5)",
+            },
+            backgroundImage: {
+              "grid-fine":
+                "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: #ffb41a;
+        transition: width 0.2s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-brand-navy text-slate-200 antialiased selection:bg-brand-accent/30 selection:text-white">
+    <div class="fixed inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div class="absolute inset-0 bg-grid-fine bg-[length:48px_48px] opacity-[0.35]"></div>
+      <div
+        class="absolute -top-48 right-0 w-[min(100%,560px)] h-[560px] rounded-full bg-brand-accent/[0.06] blur-3xl"
+      ></div>
+      <div class="absolute bottom-0 -left-32 w-96 h-96 rounded-full bg-sky-500/5 blur-3xl"></div>
+    </div>
+
+    <header
+      class="relative z-30 border-b border-white/[0.06] bg-brand-header/90 backdrop-blur-xl supports-[backdrop-filter]:bg-brand-header/80 sticky top-0"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4rem] md:min-h-[4.5rem] flex items-center justify-between gap-4 py-2 md:py-0">
+        <a
+          href="index.html"
+          class="font-logo font-normal text-2xl sm:text-3xl md:text-[2rem] lg:text-[2.125rem] text-brand-accent tracking-tight leading-none hover:text-[#ffc030] transition-colors"
+        >
+          <span class="relative inline-block whitespace-nowrap">
+            HI-BOND
+            <span class="absolute left-full top-0 ml-0.5 text-[0.42em] font-normal leading-none">®</span>
+          </span>
+        </a>
+        <nav class="flex items-center gap-1 sm:gap-2 text-[0.8125rem] sm:text-sm font-medium text-slate-400 shrink-0">
+          <a href="products.html" class="nav-link px-2 sm:px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
+            >Products</a
+          >
+          <a
+            href="index.html#company"
+            class="nav-link px-2 sm:px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors hidden sm:inline-block"
+            >Company</a
+          >
+          <a
+            href="index.html#contact"
+            class="px-3 sm:px-4 py-2 rounded-lg bg-brand-accent/10 text-brand-accent border border-brand-accent/25 hover:bg-brand-accent/15 transition-colors font-semibold"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+        <div id="product-detail"></div>
+      </div>
+    </main>
+
+    <footer class="relative z-10 border-t border-white/[0.06] bg-brand-header py-10 px-4">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-sm">
+        <div class="flex items-center gap-2 text-slate-400 text-center sm:text-left">
+          <span class="text-brand-accent" aria-hidden="true">
+            <svg class="w-5 h-5 inline" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22.7 19l-9.1-9.1c.9-2.3.4-5-.7-6.4L16 .5 12 4.5 14.5 7c-1.8-.6-3.8-.3-5.4.9-1.9 1.4-2.7 3.8-2.1 6.1L2 22l6.5-6.5c2.4.7 5.1-.1 6.7-2.1 1.2-1.6 1.5-3.6.9-5.4l2.5-2.5 2.9 2.9-5.6 5.6L22.7 19z"
+              />
+            </svg>
+          </span>
+          <p>&copy; <span id="y"></span> Hi Bond Tools Industries · Gujarat, India</p>
+        </div>
+        <p class="text-slate-600">Manufacturer · Plastering &amp; masonry trowels</p>
+      </div>
+    </footer>
+
+    <div class="hidden" aria-hidden="true">
+      <span
+        class="from-brand-accent/[0.07] bg-brand-navy-deep bg-brand-navy from-brand-navy to-brand-navy-deep via-brand-navy/40 bg-black/25 bg-black/30 bg-black/35 border-white/[0.06] border-white/[0.08] border-white/5 shadow-card shadow-black/30 hover:border-brand-accent/30 hover:ring-brand-accent/20 text-brand-accent bg-emerald-500/15 text-emerald-200 border-emerald-500/25 bg-rose-500/10 text-rose-200 border-rose-400/20 ring-1 ring-white/[0.04] ring-white/10 shadow-xl font-extrabold ease-out"
+      ></span>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="products.js"></script>
+    <script src="catalog.js"></script>
+  </body>
+</html>
