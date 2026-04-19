@@ -10,7 +10,7 @@ window.PRODUCTS = [
   {
     slug: "plastering-trowel",
     priority: 30,
-    title: "Plastering Trowel",
+    title: "Plastering Trowel v2",
     description:
       "Precision-ground stainless steel blade with comfortable wood handle. Even flex for smooth plaster and render application on walls and ceilings.",
     price: "Contact for quote",
