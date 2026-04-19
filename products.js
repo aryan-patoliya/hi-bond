@@ -15,7 +15,7 @@ window.PRODUCTS = [
     price: "Contact for quote",
     minimumOrderQuantity: 12,
     inStock: true,
-    imageUrls: ["images/plastering-trowel.jpg"],
+    imageUrls: ["images/8-no-rajkot.webp", "images/10-no-rajkot.webp", 'images/9-no-rajkot.webp'],
     material: "Steel",
     handleMaterial: "Wood",
     usageApplication: "Construction",

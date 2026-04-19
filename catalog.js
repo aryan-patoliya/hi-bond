@@ -161,7 +161,7 @@
               <p class="text-slate-400 text-sm mt-2">Minimum order quantity: <span class="text-slate-200 font-semibold">${escapeHtml(String(p.minimumOrderQuantity))}</span> units</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-3">
-              <a href="index.html#contact" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-accent text-brand-navy px-6 py-3.5 text-sm font-bold shadow-accent-glow hover:bg-[#ffc030] transition-all text-center">Contact for quote</a>
+              <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-accent text-brand-navy px-6 py-3.5 text-sm font-bold shadow-accent-glow hover:bg-[#ffc030] transition-all text-center">Contact for quote</a>
               <a href="products.html" class="inline-flex items-center justify-center rounded-xl border border-slate-500/90 bg-white/[0.04] text-white px-6 py-3.5 text-sm font-semibold hover:bg-white/[0.08] transition-colors text-center">Back to catalog</a>
             </div>
           </div>
